@@ -1,0 +1,28 @@
+1. Add a Token Handeling service like 
+// // StudentSession represents an active login session
+// type StudentSession struct {
+// 	ID           uuid.UUID  `json:"id"`
+// 	StudentID    uuid.UUID  `json:"student_id"`
+// 	Token        string     `json:"-"` // JWT token - not exposed in JSON
+// 	RefreshToken string     `json:"-"` // Refresh token - not exposed in JSON
+// 	UserAgent    string     `json:"user_agent"`
+// 	IPAddress    string     `json:"ip_address"`
+// 	DeviceInfo   string     `json:"device_info,omitempty"`
+// 	ExpiresAt    time.Time  `json:"expires_at"`
+// 	CreatedAt    time.Time  `json:"created_at"`
+// 	RevokedAt    *time.Time `json:"revoked_at,omitempty"`
+// }
+
+to manage tokens.
+
+
+2. Update Error logging and usages and definitions 
+and mapping for conversions between layers.
+
+3. Add bulk operations for admin tasks in platform_profile. 
+Like CreateProfiles, UpdateProfiles etc. 
+Add separate functions for security.
+
+4. Add MFA in login.
+
+5. Add Lock and Unlock mechanisms for multiple failed logins.

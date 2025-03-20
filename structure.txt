@@ -1,0 +1,328 @@
+Folder PATH listing for volume DATA
+Volume serial number is CAEC-4F8F
+D:.
+|   .env.example
+|   .gitignore
+|   create_structure.bat
+|   final_dir_stucture_to_follow.md
+|   go.mod
+|   go.sum
+|   structure.txt
+|   
++---cmd
+|   +---api
+|   |       main.go
+|   |       
+|   +---migrations
+|   |       main.go
+|   |       
+|   +---seed
+|   |       main.go
+|   |       
+|   \---worker
+|           main.go
+|           
++---docs
+|   +---api
+|   |       openapi.yaml
+|   |       
+|   +---architecture
+|   |       domain_model.md
+|   |       
+|   +---guides
+|   |       getting_started.md
+|   |       
+|   \---integrations
+|       +---api_references
+|       \---setup_guides
++---internal
+|   +---analytics
+|   |   +---cost
+|   |   |       service_cost_analyzer.go
+|   |   |       
+|   |   \---usage
+|   |           integration_usage.go
+|   |           
+|   +---api
+|   |   +---graphql
+|   |   |   +---directive
+|   |   |   +---resolver
+|   |   |   \---schema
+|   |   +---rest
+|   |   |   +---ai
+|   |   |   +---design
+|   |   |   +---dto
+|   |   |   |   +---request
+|   |   |   |   \---response
+|   |   |   +---handler
+|   |   |   |   +---quiz
+|   |   |   |   |       attempt_handler.go
+|   |   |   |   |       quiz_handler.go
+|   |   |   |   |       
+|   |   |   |   \---student
+|   |   |   |           auth_handler.go
+|   |   |   |           profile_handler.go
+|   |   |   |           
+|   |   |   +---middleware
+|   |   |   |       auth.go
+|   |   |   |       logging.go
+|   |   |   |       rate_limit.go
+|   |   |   |       
+|   |   |   \---router
+|   |   |           quiz_routes.go
+|   |   |           router.go
+|   |   |           student_routes.go
+|   |   |           
+|   |   \---webhook
+|   |           canva_webhook.go
+|   |           google_webhook.go
+|   |           onesignal_webhook.go
+|   |           
+|   +---common
+|   |   +---errors
+|   |   |       domain_errors.go
+|   |   |       http_errors.go
+|   |   |       
+|   |   +---utils
+|   |   |       pagination.go
+|   |   |       security.go
+|   |   |       
+|   |   \---validator
+|   |           input_sanitizer.go
+|   |           password_validator.go
+|   |           
+|   +---compliance
+|   |   |   integration_auditor.go
+|   |   |   
+|   |   +---audit
+|   |   +---data_sharing
+|   |   |       consent_manager.go
+|   |   |       
+|   |   \---gdpr
+|   |           data_processor.go
+|   |           
+|   +---config
+|   |       app_config.go
+|   |       credentials.go
+|   |       environment.go
+|   |       feature_flags.go
+|   |       integration_config.go
+|   |       
+|   +---domain
+|   |   +---ai
+|   |   |       model.go
+|   |   |       repository.go
+|   |   |       service.go
+|   |   |       
+|   |   +---coordinator
+|   |   |       model.go
+|   |   |       repository.go
+|   |   |       service.go
+|   |   |       
+|   |   +---design
+|   |   |       model.go
+|   |   |       repository.go
+|   |   |       service.go
+|   |   |       
+|   |   +---event
+|   |   |       model.go
+|   |   |       repository.go
+|   |   |       service.go
+|   |   |       
+|   |   +---integration
+|   |   |       ai_provider.go
+|   |   |       design_provider.go
+|   |   |       file_storage_provider.go
+|   |   |       notification_provider.go
+|   |   |       
+|   |   +---quiz
+|   |   |   |   model.go
+|   |   |   |   repository.go
+|   |   |   |   service.go
+|   |   |   |   
+|   |   |   \---question
+|   |   |           base.go
+|   |   |           fill_blank.go
+|   |   |           mcq.go
+|   |   |           true_false.go
+|   |   |           
+|   |   +---role
+|   |   |       model.go
+|   |   |       repository.go
+|   |   |       service.go
+|   |   |       
+|   |   \---student
+|   |           model.go
+|   |           repository.go
+|   |           service.go
+|   |           
+|   +---eventbus
+|   |   +---events
+|   |   |       quiz_events.go
+|   |   |       student_events.go
+|   |   |       
+|   |   +---publisher
+|   |   |       kafka_publisher.go
+|   |   |       
+|   |   \---subscriber
+|   |           kafka_subscriber.go
+|   |           
+|   +---infrastructure
+|   |   +---auth
+|   |   |       api_key_manager.go
+|   |   |       jwt_provider.go
+|   |   |       oauth_client.go
+|   |   |       
+|   |   +---cache
+|   |   |       local_cache.go
+|   |   |       redis_cache.go
+|   |   |       
+|   |   +---database
+|   |   |   +---mongodb
+|   |   |   |   |   connection.go
+|   |   |   |   |   
+|   |   |   |   \---repositories
+|   |   |   \---postgres
+|   |   |       |   connection.go
+|   |   |       |   
+|   |   |       +---migrations
+|   |   |       \---repositories
+|   |   |               quiz_repo.go
+|   |   |               student_repo.go
+|   |   |               
+|   |   +---discovery
+|   |   |       service_registry.go
+|   |   |       
+|   |   +---email
+|   |   |       smtp_provider.go
+|   |   |       template_engine.go
+|   |   |       
+|   |   +---fallback
+|   |   |       notification_fallback.go
+|   |   |       storage_fallback.go
+|   |   |       
+|   |   +---integration
+|   |   |   +---canva
+|   |   |   |       design_client.go
+|   |   |   |       
+|   |   |   +---factory
+|   |   |   |       ai_factory.go
+|   |   |   |       notification_factory.go
+|   |   |   |       storage_factory.go
+|   |   |   |       
+|   |   |   +---google
+|   |   |   |       auth.go
+|   |   |   |       calendar.go
+|   |   |   |       drive.go
+|   |   |   |       
+|   |   |   +---huggingface
+|   |   |   |       client.go
+|   |   |   |       model_manager.go
+|   |   |   |       
+|   |   |   +---onesignal
+|   |   |   |       notification_client.go
+|   |   |   |       
+|   |   |   \---versioning
+|   |   |           version_manager.go
+|   |   |           
+|   |   +---migration
+|   |   |       service_switcher.go
+|   |   |       
+|   |   +---monitoring
+|   |   |   |   integration_health.go
+|   |   |   |   
+|   |   |   \---alerts
+|   |   |           service_degradation.go
+|   |   |           
+|   |   +---offline
+|   |   |       offline_queue.go
+|   |   |       
+|   |   +---quota
+|   |   |       limit_tracker.go
+|   |   |       throttling_service.go
+|   |   |       
+|   |   +---sdk
+|   |   |       google_sdk_wrapper.go
+|   |   |       huggingface_sdk_wrapper.go
+|   |   |       
+|   |   \---storage
+|   |           local_storage.go
+|   |           s3_storage.go
+|   |           
+|   +---security
+|   |   \---scanner
+|   |           integration_scanner.go
+|   |           
+|   +---tenant
+|   |       integration_config.go
+|   |       
+|   \---worker
+|       +---analytics
+|       |       report_worker.go
+|       |       
+|       +---email
+|       |       notification_worker.go
+|       |       
+|       \---notification
+|               push_worker.go
+|               
++---migrations
+|   +---mongodb
+|   \---postgres
+|           000001_create_students.down.sql
+|           000001_create_students.up.sql
+|           
++---pkg
+|   +---logger
+|   |       logger.go
+|   |       
+|   +---pagination
+|   |       paginator.go
+|   |       
+|   \---security
+|           password.go
+|           
++---scripts
+|   +---ci
+|   |       build.sh
+|   |       test.sh
+|   |       
+|   +---deploy
+|   |   |   docker-compose.yml
+|   |   |   
+|   |   \---kubernetes
+|   \---local
+|           setup.sh
+|           
++---seeds
+|   |   seed_runner.go
+|   |   
+|   +---development
+|   |       001_roles.go
+|   |       002_admin_users.go
+|   |       003_sample_data.go
+|   |       
+|   +---production
+|   |       default_settings.go
+|   |       initial_roles.go
+|   |       
+|   \---testing
+|           test_scenarios.go
+|           test_users.go
+|           
+\---test
+    +---fixtures
+    |       students.json
+    |       
+    +---integration
+    |   |   db_test_helper.go
+    |   |   
+    |   \---external
+    |       |   google_test.go
+    |       |   onesignal_test.go
+    |       |   
+    |       \---mock_services
+    |               mock_google_api.go
+    |               
+    \---mocks
+        \---repositories

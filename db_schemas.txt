@@ -1,0 +1,6 @@
+Schemas:
+profile_schema 
+
+Tables:
+platform_profiles
+deleted_profiles . Add the deleted_at column.
